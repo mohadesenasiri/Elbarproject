@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/owners.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="../style/owners.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/all.css">
+    <link rel="stylesheet" href="../style/fonts.css">
+    <link rel="stylesheet" href="../style/driver.css">
+
     <title>رانندگان</title>
 </head>
 
 <body>
     <div class="header" id="header"><!--header-start-->
         <div class="container">
-            <a href="index.html"><img src="./img/logo.png" alt=""></a>
+            <a href="index.html"><img src="../img/logo.png" alt=""></a>
             <h1 class="animated fadeInDown delay-07s" style="text-shadow: 0 0 5px black;">
                 با ثبت نام در ال بار به هر کجا که میخواهید بار حمل کنید
             </h1>
@@ -26,47 +28,57 @@
     </div><!--header-end-->
 
     <!-- log in -->
-    <div class="popup">
-        <div class="popup-content">
-            <p class="title">به ال بار خوش آمدید</p>
-            <p id="loginORcreat">ورود کاربران</p>
+    <div class="popup-driver">
+        <div class="popup-content-diver">
+            <p class="title">ثبت نام رانندگان</p>
             <i class=" fas fa-solid fa-xmark close"></i>
-            <input type="username" class="username-input" placeholder="شماره تماس">
-            <input type="password" class="password-input" placeholder="رمز عبور">
-            <button class="btn-login">
-                ورود
+            <input type="username" class="username-input" placeholder="نام و نام خانوادگی">
+            <input type="tel" class="phonenumber-input" placeholder="تلفن همراه">
+            <button class="btn-logindriver">
+                دریافت کد فعالسازی
             </button>
-            <div id="creatlink">
-                <P>در ال بار ثبت نام کرده اید؟</P><a href="#" class="createuser">ایجاد حساب کاربری</a>
-                <a href="#" id="loginUser">ورود کاربران</a>
+            <div class="timer">
+                <div class="show-time">
+                    <span class="text"> زمان باقیمانده :</span>
+                    <span id="seconds">00</span>
+                    <span class="dot">:</span>
+                    <span id="minutes">0</span>
+                </div>
+                <div class="otp-code">
+                    <input type="text" class="number-otp" maxlength="1">
+                    <input type="text" class="number-otp" maxlength="1">
+                    <input type="text" class="number-otp" maxlength="1">
+                    <input type="text" class="number-otp" maxlength="1">
+                    <input type="text" class="number-otp" maxlength="1">
+                </div>
+                <button class="hide" id="submit">تایید کد و ایجاد حساب کاربری</button>
             </div>
         </div>
     </div>
     <!-- log in  -->
 
     <div class="list">
-        <ul class="main-nav">
-            <li><a href="#">صفحه اصلی</a></li>
-            <li><a href="#">ال بار چیست</a></li>
-            <li class="small-logo"><a href="#"><img src="img/small-logo1.png" alt=""></a></li>
-            <li><a href="#">مشتریان</a></li>
-            <li><a href="#">تماس با ما</a></li>
-        </ul>
+        <i class="fa-solid fa-bars hamburger-menue fa-2x"></i>
+        <div class="navigation">
+            <ul class="main-nav">
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">ال بار چیست</a></li>
+                <li class="small-logo"><a href="#"><img src="../img/small-logo1.png" alt=""></a></li>
+                <li><a href="#">مشتریان</a></li>
+                <li><a href="#">تماس با ما</a></li>
+            </ul>
+        </div>
     </div>
     <section class="main-section" id="service"><!--main-section-start-->
         <div id="main-owner">
             <h2>ال بار چیست؟</h2>
-            <h6>سامانه هوشمند اِل بار با ایجاد دسترسی بدون واسطه صاحبان بار و رانندگان در اقصی نقاط کشور، بزرگترین و
-                جامع ترین سامانه حمل و نقل اینترنتی بار می باشد. با ثبت نام در سامانه اِل بار دیگر نیازی به اتلاف
-                وقت
-                جهت یافتن راننده و ناوگان مورد نیازتان در باربری ها را نداشته و در هر لحظه به هزاران راننده دسترسی
-                خواهید داشت. با اِل بار کالاهایتان را در اسرع وقت و با کیفیت عالی از هر نقطه کشور به مقصد مورد نظر
-                ارسال
-                کنید. </h6>
+            <h6>سامانه هوشمند ال بار با دسترسی به صاحبان بار در اقصی نقاط کشور، بزرگترین و جامع ترین مرجع اعلام بار
+                اینترنتی می باشد. با پیوستن به ناوگان ال بار دیگر نیازی به اتلاف وقت در باربری ها نداشته و از هر جای
+                کشور بار مورد نظر خود را انتخاب نموده و به مقصد مورد نظر حمل کنید.</h6>
         </div>
 
         <div id="section1">
-            <img src="./img/macbook1-pro.png" alt="">
+            <img src="../img/macbook1-pro.png" alt="">
             <div class="comments">
                 <div id="createuser">
 
@@ -75,37 +87,26 @@
                     </h3>
                     <i class="fas fa-sign-in fa-2x"></i>
                 </div>
-                <p>با تکمیل فرم ثبت نام در سایت اِل بار می توانید تمامی بارهای مورد نظرتان را برای هزاران راننده
-                    متقاضی
-                    به
-                    نمایش بگذارید . همچنین برنامه موبایل اِل بار برای تمامی گوشی‌های اندروید در دسترس است. کافیست
-                    ثبت
-                    نام
-                    کنید تا لینک دانلود این برنامه برای شما از طریق پیامک ارسال شود</p>
+                <p>برنامه موبایل ال بار برای تمامی گوشی‌های اندروید در دسترس است. کافیست ثبت نام کنید تا لینک دانلود این
+                    برنامه برای شما از طریق پیامک ارسال شود
+                </p>
                 <div id="createuser">
                     <h3>
-                        انتخاب راننده
+                        انتخاب بار
                     </h3>
                     <i class="fas fa-truck fa-2x"></i>
                 </div>
-                <p>اِل بار این امکان را برای صاحبان بار فراهم‌ نموده است تا درهرلحظه از شبانه‌روز، خودروهای متناسب
-                    با
-                    بار
-                    خود را از بین راننگان متعدد این شرکت انتخاب و محموله خود را در کمترین زمان ممکن و با مناسب‌ترین
-                    قیمت
-                    ارسال کنند </p>
+                <p>ال بار این امکان را برای رانندگان ناوگان باربری فراهم‌ نموده است تا درهرلحظه از شبانه‌روز، بارهای
+                    متناسب با ماشین خود را در سراسر کشور مشاهده و بر اساس معیارهایی نظیر مبدأ، مقصد و کرایه حمل ، بار
+                    موردنظر خود را در کمترین زمان ممکن و با مناسب‌ترین قیمت انتخاب کنند</p>
                 <div id="createuser">
                     <h3>
                         پشتیبانی
                     </h3>
                     <i class="fas fa-comments fa-2x"></i>
                 </div>
-                <p>امکانات پشتیبانی اِل بار مانند ردیابی ماهواره ای و نمایش آنلاین خودرو ، سامانه پیامکی و پشتیبانی
-                    تلفنی در
-                    تمام ساعات شبانه روز این امکان را برای شما میسر ساخته تا در هر ساعت و لحظه از مکان محموله خود
-                    اطلاع
-                    و
-                    همچنین در پایان سفر از تحویل محموله به مقصد آگاه گردید </p>
+                <p>با پشتیبانی ال بار تماس بگیرید و از خدمات بیمه ای ، تامین قطعات و کمک رسانی در هنگام بروز مشکلات فنی
+                    بهره ببرید</p>
             </div>
         </div>
     </section><!--main-section-end-->
@@ -152,7 +153,7 @@
                     به سامانه ال بار مراجعه کنید
                 </p>
             </div>
-            <img src="./img/iphone1.png" alt="">
+            <img src="../img/iphone1.png" alt="">
 
         </div>
     </section><!--main-section-end-->
@@ -248,17 +249,17 @@
         </div>
         <div class="nemadphoto">
             <a href="https://trustseal.enamad.ir/?id=165056&Code=bjzcFnxMYX45yBqu2CSI" target="_blank">
-                <img src="./img/enemad.png" alt="" class="nemadpic">
+                <img src="../img/enemad.png" alt="" class="nemadpic">
             </a>
             <a href="https://logo.samandehi.ir/Verify.aspx?id=172008&p=rfthjyoeuiwkobpdobpdmcsi" target="_blank">
-                <img src="./img/samaneh.png" alt="" class="nemadpic">
+                <img src="../img/samaneh.png" alt="" class="nemadpic">
             </a>
             <a href="https://ecunion.ir/verify/elbar.ir?token=58927066163f11197ec7" target="_blank">
-                <img src="./img/etehadieh.svg" alt="" class="nemadpic">
+                <img src="../img/etehadieh.svg" alt="" class="nemadpic">
             </a>
         </div>
     </footer>
-
+    <script src="../javascript/login-driver.js"></script>
 </body>
 
 </html>

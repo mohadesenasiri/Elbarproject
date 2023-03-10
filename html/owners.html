@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/owners.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="../style/owners.css">
+    <!-- <link rel="stylesheet" href="../style/style.css"> -->
+    <link rel="stylesheet" href="../style/all.css">
+    <link rel="stylesheet" href="../style/fonts.css">
     <title>صاحبان بار</title>
 </head>
 
@@ -18,7 +18,7 @@
     <body>
         <div class="header" id="header"><!--header-start-->
             <div class="container">
-                <a href="index.html"><img src="./img/logo.png" alt=""></a>
+                <a href="index.html"><img src="../img/logo.png" alt=""></a>
                 <h1 class="animated fadeInDown delay-07s" style="text-shadow: 0 0 5px black;">
                     اِل بار روشی مدرن و هوشمندانه جهت حمل و نقل کالا به سراسر کشور
                 </h1>
@@ -30,37 +30,56 @@
 
         <!-- log in -->
         <div class="popup">
-            <div class="popup-content">
+            <form class="popup-content" action="#">
                 <p class="title">به ال بار خوش آمدید</p>
                 <p id="loginORcreat">ورود کاربران</p>
                 <i class=" fas fa-solid fa-xmark close"></i>
                 <input type="username" class="username-input" placeholder="شماره تماس"><i></i>
-                <!-- <label class="checkbox1"><input type="checkbox" id="checkbox" name="checkbox" >
-                    با قوانین اِل بار موافقم 
-                    <span style="margin-right: 5px; margin-left: 5px;">
-                        (<a href="rules.html">مشاهده قوانین</a>)
-                    </span>
-                </label> -->
+                <div class="checkbox1">
+                    <input type="checkbox" id="checkbox" name="checkbox">
+                    با قوانین اِل بار موافقم
+                    (<a href="rules.html">مشاهده قوانین</a>)
+                </div>
                 <input type="password" class="password-input" placeholder="رمز عبور">
                 <button class="btn-login">
                     ورود
                 </button>
+                <div class="timer">
+                    <div class="show-time">
+                        <span class="text"> زمان باقیمانده :</span>
+                        <span id="seconds">00</span>
+                        <span class="dot">:</span>
+                        <span id="minutes">0</span>
+                    </div>
+                    <div class="otp-code">
+                        <input type="text" class="number-otp" maxlength="1">
+                        <input type="text" class="number-otp" maxlength="1">
+                        <input type="text" class="number-otp" maxlength="1">
+                        <input type="text" class="number-otp" maxlength="1">
+                        <input type="text" class="number-otp" maxlength="1">
+                    </div>
+                    <button class="hide" id="submit">تایید کد و ایجاد حساب کاربری</button>
+                </div>
                 <div id="creatlink">
-                    <P>در ال بار ثبت نام کرده اید؟</P><a href="#" class="createuser">ایجاد حساب کاربری</a>
+                    <a href="./resetpassword.html" id="resetpass">رمز عبور خود را فراموش کرده اید؟</a>
+                    <P>در ال بار ثبت نام نکرده اید؟</P><a href="#" class="createuser">ایجاد حساب کاربری</a>
                     <a href="#" id="loginUser">ورود کاربران</a>
                 </div>
-            </div>
+            </form>
         </div>
         <!-- log in  -->
 
         <div class="list">
-            <ul class="main-nav">
-                <li><a href="#">صفحه اصلی</a></li>
-                <li><a href="#">ال بار چیست</a></li>
-                <li class="small-logo"><a href="#"><img src="img/small-logo1.png" alt=""></a></li>
-                <li><a href="#">مشتریان</a></li>
-                <li><a href="#">تماس با ما</a></li>
-            </ul>
+            <i class="fa-solid fa-bars hamburger-menue fa-2x"></i>
+            <div class="navigation">
+                <ul class="main-nav">
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="#main-owner">ال بار چیست</a></li>
+                    <li class="small-logo"><a href="#"><img src="../img/logo2.png" alt=""></a></li>
+                    <li><a href="#section1">مشتریان</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </div>
         </div>
         <section class="main-section" id="service"><!--main-section-start-->
             <div id="main-owner">
@@ -75,7 +94,7 @@
             </div>
 
             <div id="section1">
-                <img src="./img/macbook1-pro.png" alt="">
+                <img src="../img/macbook1-pro.png" alt="">
                 <div class="comments">
                     <div id="createuser">
 
@@ -158,14 +177,14 @@
                         یافته و پس از تحویل محموله به مقصد توسط سامانه اطلاع رسانی اِل بار از تحویل محموله مطلع گردید
                     </p>
                 </div>
-                <img src="./img/iphone2.png" alt="">
+                <img src="../img/iphone2.png" alt="">
 
             </div>
         </section><!--main-section-end-->
 
 
         <section class="business-talking"><!--business-talking-start-->
-            <div class="ContactUs">
+            <div class="ContactUs" id="ContactUs">
                 <!-- <h2>
                     تماس با ما
                 </h2> -->
@@ -254,18 +273,18 @@
             </div>
             <div class="nemadphoto">
                 <a href="https://trustseal.enamad.ir/?id=165056&Code=bjzcFnxMYX45yBqu2CSI" target="_blank">
-                    <img src="./img/enemad.png" alt="" class="nemadpic">
+                    <img src="../img/enemad.png" alt="" class="nemadpic">
                 </a>
                 <a href="https://logo.samandehi.ir/Verify.aspx?id=172008&p=rfthjyoeuiwkobpdobpdmcsi" target="_blank">
-                    <img src="./img/samaneh.png" alt="" class="nemadpic">
+                    <img src="../img/samaneh.png" alt="" class="nemadpic">
                 </a>
                 <a href="https://ecunion.ir/verify/elbar.ir?token=58927066163f11197ec7" target="_blank">
-                    <img src="./img/etehadieh.svg" alt="" class="nemadpic">
+                    <img src="../img/etehadieh.svg" alt="" class="nemadpic">
                 </a>
             </div>
         </footer>
 
-        <script src="./javascript/login.js"></script>
+        <script src="../javascript/login.js"></script>
     </body>
 
 </html>
